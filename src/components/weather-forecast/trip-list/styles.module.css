@@ -1,8 +1,25 @@
-.wrapper {
+.tripsContainer {
   max-width: 860px;
   display: flex;
   gap: 55px;
   overflow-x: auto;
   white-space: nowrap;
   padding-bottom: 5px;
+}
+
+.searchBar {
+  display: flex;
+  gap: 7px;
+  width: 280px;
+  margin-bottom: 35px;
+  background-color: #f2f4f8;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.searchBar input {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  outline: none;
 }

@@ -4,7 +4,7 @@ import { TripList } from './trip-list/trip-list.jsx';
 const WeatherForecast = () => {
   return (
     <main className={styles.container}>
-      <h1>
+      <h1 className={styles.title}>
         <span>Weather</span> Forecast
       </h1>
       <TripList />
