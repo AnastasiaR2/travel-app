@@ -1,4 +1,5 @@
 import styles from './styles.module.css';
+import { TripList } from './trip-list/trip-list.jsx';
 
 const WeatherForecast = () => {
   return (
@@ -6,6 +7,7 @@ const WeatherForecast = () => {
       <h1>
         <span>Weather</span> Forecast
       </h1>
+      <TripList />
     </main>
   );
 };

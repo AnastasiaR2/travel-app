@@ -1,0 +1,32 @@
+[
+  {
+    "id": "4c7564ad-fafc-4641-a692-55a683de7fbe",
+    "city": "London",
+    "image": "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3"
+  },
+  {
+    "id": "d96b8374-3efa-4124-8e38-1edd11bd07f5",
+    "city": "Berlin",
+    "image": "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+  },
+  {
+    "id": "2ba63e60-167d-472a-ab66-55af9115d48e",
+    "city": "Tokyo",
+    "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3"
+  },
+  {
+    "id": "b192252e-2bb6-4cf3-b9cb-34a8a2f94891",
+    "city": "Barcelona",
+    "image": "https://images.unsplash.com/photo-1589708532758-ddd0753b0f2f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+  },
+  {
+    "id": "6417f33c-31e0-444a-abac-cd0c1f8e48d0",
+    "city": "Kyiv",
+    "image": "https://images.unsplash.com/photo-1591994717566-b50f283b4e63?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3"
+  },
+  {
+    "id": "e5c23843-455a-46c2-bedb-af269089fba7",
+    "city": "Lviv",
+    "image": "https://images.unsplash.com/photo-1625043304622-58f0aa1575f9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3"
+  }
+]
