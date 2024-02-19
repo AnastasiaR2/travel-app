@@ -1,0 +1,8 @@
+.wrapper {
+  max-width: 860px;
+  display: flex;
+  gap: 55px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
