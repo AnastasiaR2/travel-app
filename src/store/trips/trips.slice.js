@@ -11,7 +11,7 @@ const mockedTrip = {
 };
 
 const mockedTrip2 = {
-  id: '4c7564ad-fafc-4641-a692-55a683de7fbe',
+  id: '4c7564ad-fafc',
   city: 'Berlin',
   image:
     'https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3',
@@ -21,7 +21,7 @@ const mockedTrip2 = {
 };
 
 const mockedTrip3 = {
-  id: '4c7564ad-fafc-4641-a692-55a683de7fbe',
+  id: '4c7564ada692-55a683de7fbe',
   city: 'Tokyo',
   image:
     'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3',
@@ -31,7 +31,7 @@ const mockedTrip3 = {
 };
 
 const mockedTrip4 = {
-  id: '4c7564ad-fafc-4641-a692-55a683de7fbe',
+  id: '641-a692-55a683de7fbe',
   city: 'Lviv',
   image:
     'https://images.unsplash.com/photo-1625043304622-58f0aa1575f9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3',

@@ -1,5 +1,5 @@
 .itemContainer {
-  min-width: 250px;
+  flex: 0 0 250px;
 }
 
 .itemContainer img {
@@ -15,4 +15,8 @@
   border: 1px solid #f2f4f8;
   padding: 20px;
   margin-top: -5px;
+}
+
+.date {
+  color: #808080;
 }
