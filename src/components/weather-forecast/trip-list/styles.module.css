@@ -1,4 +1,8 @@
 .tripsContainer {
+  position: relative;
+}
+
+.tripsList {
   max-width: 860px;
   display: flex;
   gap: 55px;
@@ -18,8 +22,15 @@
 }
 
 .searchBar input {
-  border: none;
-  background-color: transparent;
   font-weight: bold;
-  outline: none;
+}
+
+.addTripBtn {
+  width: 250px;
+  height: 250px;
+  font-size: 1.2rem;
+  background-color: #f2f4f8;
+  position: absolute;
+  top: 0;
+  left: 915px;
 }

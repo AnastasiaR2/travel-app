@@ -29,6 +29,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 input::placeholder {
   color: inherit;
 }

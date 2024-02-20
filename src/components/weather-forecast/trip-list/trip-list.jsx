@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import AddIcon from '~/assets/images/icons/add-icon.svg?react';
 import SearchIcon from '~/assets/images/icons/search-icon.svg?react';
 import { selectTrips } from '~/store/trips/selectors.js';
 
@@ -35,9 +36,15 @@ const TripList = () => {
         />
       </div>
       <div className={styles.tripsContainer}>
-        {sortedTrips.map((trip) => (
-          <TripItem key={trip.id} trip={trip} />
-        ))}
+        <div className={styles.tripsList}>
+          {sortedTrips.map((trip) => (
+            <TripItem key={trip.id} trip={trip} />
+          ))}
+        </div>
+        <button className={styles.addTripBtn}>
+          <AddIcon />
+          <p>Add trip</p>
+        </button>
       </div>
     </>
   );
