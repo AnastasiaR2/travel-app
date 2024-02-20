@@ -1,26 +1,26 @@
 [
   {
-    "city": "London",
+    "title": "London",
     "image": "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
   {
-    "city": "Berlin",
+    "title": "Berlin",
     "image": "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
   {
-    "city": "Tokyo",
+    "title": "Tokyo",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
   {
-    "city": "Barcelona",
+    "title": "Barcelona",
     "image": "https://images.unsplash.com/photo-1589708532758-ddd0753b0f2f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
   {
-    "city": "Kyiv",
+    "title": "Kyiv",
     "image": "https://images.unsplash.com/photo-1591994717566-b50f283b4e63?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
   {
-    "city": "Lviv",
+    "title": "Lviv",
     "image": "https://images.unsplash.com/photo-1625043304622-58f0aa1575f9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3"
   }
 ]

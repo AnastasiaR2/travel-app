@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useCallback, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import AddIcon from '~/assets/images/icons/add-icon.svg?react';
 import SearchIcon from '~/assets/images/icons/search-icon.svg?react';
 import { selectTrips } from '~/store/trips/selectors.js';
+import { actions as tripsActions } from '~/store/trips/trips.slice.js';
 
 import { AddTripModal } from './add-trip-modal/add-trip-modal.jsx';
 import styles from './styles.module.css';
@@ -11,7 +12,31 @@ import { TripItem } from './trip-item/trip-item.jsx';
 
 const TripList = () => {
   const trips = useSelector(selectTrips);
+  const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentTrip, setCurrentTrip] = useState(null);
+
+  const hasCurrentTrip = Boolean(currentTrip);
+
+  const handleModalOpen = () =>
+    setCurrentTrip({
+      city: null,
+      startDate: '',
+      endDate: '',
+    });
+
+  const handleModalClose = () => setCurrentTrip(null);
+
+  const handleTripAdd = useCallback(
+    (tripPayload) => dispatch(tripsActions.addTrip(tripPayload)),
+    [dispatch],
+  );
+
+  const handleTripSave = (trip) => {
+    handleTripAdd(trip);
+
+    setCurrentTrip(null);
+  };
 
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -24,8 +49,6 @@ const TripList = () => {
   const sortedTrips = [...filteredTrips].sort(
     (a, b) => new Date(a.startDate) - new Date(b.startDate),
   );
-
-  const isOpen = true;
 
   return (
     <>
@@ -44,11 +67,17 @@ const TripList = () => {
             <TripItem key={trip.id} trip={trip} />
           ))}
         </div>
-        <button className={styles.addTripBtn}>
+        <button className={styles.addTripBtn} onClick={handleModalOpen}>
           <AddIcon />
           <p>Add trip</p>
         </button>
-        {isOpen && <AddTripModal isOpen={isOpen} />}
+        {hasCurrentTrip && (
+          <AddTripModal
+            trip={currentTrip}
+            onSave={handleTripSave}
+            onClose={handleModalClose}
+          />
+        )}
       </div>
     </>
   );
