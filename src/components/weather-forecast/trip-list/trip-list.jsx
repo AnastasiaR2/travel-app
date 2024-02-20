@@ -12,8 +12,8 @@ const TripList = () => {
   const trips = useSelector(selectTrips);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleInputChange = (e) => {
-    setSearchQuery(e.target.value);
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
   };
 
   const filteredTrips = trips.filter((trip) =>
