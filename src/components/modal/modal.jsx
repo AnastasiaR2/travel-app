@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect } from 'react';
 
+import styles from './styles.module.css';
+
 const Modal = ({ isOpen, onClose, children }) => {
   const handleEscapePress = useCallback(
     (event) => {
@@ -28,8 +30,8 @@ const Modal = ({ isOpen, onClose, children }) => {
   }, [handleEscapePress]);
 
   return isOpen ? (
-    <div className="modal-overlay" onClick={handleClickOutside}>
-      <div className="modal-content">{children}</div>
+    <div className={styles.modal} onClick={handleClickOutside}>
+      {children}
     </div>
   ) : null;
 };

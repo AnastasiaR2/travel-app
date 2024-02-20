@@ -5,6 +5,7 @@ import AddIcon from '~/assets/images/icons/add-icon.svg?react';
 import SearchIcon from '~/assets/images/icons/search-icon.svg?react';
 import { selectTrips } from '~/store/trips/selectors.js';
 
+import { AddTripModal } from './add-trip-modal/add-trip-modal.jsx';
 import styles from './styles.module.css';
 import { TripItem } from './trip-item/trip-item.jsx';
 
@@ -23,6 +24,8 @@ const TripList = () => {
   const sortedTrips = [...filteredTrips].sort(
     (a, b) => new Date(a.startDate) - new Date(b.startDate),
   );
+
+  const isOpen = true;
 
   return (
     <>
@@ -45,6 +48,7 @@ const TripList = () => {
           <AddIcon />
           <p>Add trip</p>
         </button>
+        {isOpen && <AddTripModal isOpen={isOpen} />}
       </div>
     </>
   );
