@@ -11,7 +11,7 @@ const fetchForecastForPeriod = createAsyncThunk(
   async (payload) => {
     const { city, startDate, endDate } = payload;
     const response = await axios.get(
-      `${city}/${startDate}/${endDate}?unitGroup=metric&include=days&key=${API_KEY}&contentType=json`,
+      `${city}/${startDate}/${endDate}?unitGroup=metric&include=days&key=${API_KEY}&contentType=json&iconSet=icons2`,
     );
     return response.data;
   },
@@ -22,7 +22,7 @@ const fetchForecastForToday = createAsyncThunk(
   async (payload) => {
     const { city } = payload;
     const response = await axios.get(
-      `${city}/today?unitGroup=metric&include=days&key=${API_KEY}&contentType=json`,
+      `${city}/today?unitGroup=metric&include=days&key=${API_KEY}&contentType=json&iconSet=icons2`,
     );
     return response.data;
   },

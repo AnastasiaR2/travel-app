@@ -40,8 +40,6 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
         createdAt: new Date().toISOString(),
       };
 
-      console.log(finalTrip);
-
       onSave(finalTrip);
     } else {
       form.reportValidity();
