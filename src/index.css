@@ -46,3 +46,10 @@ select {
 input::placeholder {
   color: inherit;
 }
+
+select {
+  appearance: none;
+  background-image: url("~/assets/images/icons/arrow-down-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px top 10px;
+}

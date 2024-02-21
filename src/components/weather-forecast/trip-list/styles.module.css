@@ -1,9 +1,10 @@
 .tripsContainer {
-  position: relative;
+  display: flex;
+  gap: 55px;
 }
 
 .tripsList {
-  max-width: 860px;
+  width: 860px;
   display: flex;
   gap: 55px;
   overflow-x: auto;
@@ -30,7 +31,5 @@
   height: 250px;
   font-size: 1.2rem;
   background-color: #f2f4f8;
-  position: absolute;
-  top: 0;
-  left: 915px;
+  flex-shrink: 0;
 }

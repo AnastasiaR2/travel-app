@@ -1,10 +1,14 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import CloseIcon from '~/assets/images/icons/close-icon.svg?react';
 import { Modal } from '~/components/components.js';
 import cities from '~/data/cities.json';
 
 import styles from './styles.module.css';
+
+const NUMBER_OF_DAYS = 15;
 
 const AddTripModal = ({ isOpen, onSave, onClose }) => {
   const [currentTrip, setCurrentTrip] = useState({
@@ -23,21 +27,33 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
     const form = event.target;
 
     if (form.checkValidity()) {
-      const tripId = Math.random();
       const { startDate, endDate, city } = currentTrip;
+      const selectedCity = cities.find((item) => item.title === city);
+      const { image } = selectedCity;
 
       const finalTrip = {
-        tripId,
+        id: uuidv4(),
+        city,
+        image,
         startDate,
         endDate,
-        city,
+        createdAt: new Date().toISOString(),
       };
+
+      console.log(finalTrip);
 
       onSave(finalTrip);
     } else {
       form.reportValidity();
     }
   };
+
+  const currentDate = new Date();
+  const next15Days = new Date(currentDate);
+  next15Days.setDate(currentDate.getDate() + NUMBER_OF_DAYS - 1);
+
+  const minDate = currentDate.toISOString().split('T')[0];
+  const maxDate = next15Days.toISOString().split('T')[0];
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -58,9 +74,9 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
                 <option value="" hidden>
                   Select a city
                 </option>
-                {cities.map((city) => (
-                  <option key={city.title} value={city.title}>
-                    {city.title}
+                {cities.map((item) => (
+                  <option key={item.title} value={item.title}>
+                    {item.title}
                   </option>
                 ))}
               </select>
@@ -72,6 +88,8 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
               <input
                 type="date"
                 name="startDate"
+                min={minDate}
+                max={maxDate}
                 required
                 onChange={handleChange}
               />
@@ -83,6 +101,8 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
               <input
                 type="date"
                 name="endDate"
+                min={minDate}
+                max={maxDate}
                 required
                 onChange={handleChange}
               />
@@ -100,6 +120,12 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
       </div>
     </Modal>
   );
+};
+
+AddTripModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export { AddTripModal };
