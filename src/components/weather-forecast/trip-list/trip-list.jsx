@@ -14,28 +14,19 @@ const TripList = () => {
   const trips = useSelector(selectTrips);
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState('');
-  const [currentTrip, setCurrentTrip] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const hasCurrentTrip = Boolean(currentTrip);
+  const handleToggleModalOpen = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
-  const handleModalOpen = () =>
-    setCurrentTrip({
-      city: null,
-      startDate: '',
-      endDate: '',
-    });
-
-  const handleModalClose = () => setCurrentTrip(null);
-
-  const handleTripAdd = useCallback(
-    (tripPayload) => dispatch(tripsActions.addTrip(tripPayload)),
-    [dispatch],
-  );
+  const handleTripAdd = (tripPayload) =>
+    dispatch(tripsActions.addTrip(tripPayload));
 
   const handleTripSave = (trip) => {
     handleTripAdd(trip);
 
-    setCurrentTrip(null);
+    handleToggleModalOpen();
   };
 
   const handleInputChange = (event) => {
@@ -67,15 +58,15 @@ const TripList = () => {
             <TripItem key={trip.id} trip={trip} />
           ))}
         </div>
-        <button className={styles.addTripBtn} onClick={handleModalOpen}>
+        <button className={styles.addTripBtn} onClick={handleToggleModalOpen}>
           <AddIcon />
           <p>Add trip</p>
         </button>
-        {hasCurrentTrip && (
+        {isModalOpen && (
           <AddTripModal
-            trip={currentTrip}
+            isOpen={isModalOpen}
             onSave={handleTripSave}
-            onClose={handleModalClose}
+            onClose={handleToggleModalOpen}
           />
         )}
       </div>

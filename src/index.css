@@ -4,10 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 0; */
+  outline: none;
 }
 
 html {
+
   ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -34,7 +35,8 @@ button {
 }
 
 button,
-input {
+input,
+select {
   outline: none;
   border: none;
   background-color: transparent;
