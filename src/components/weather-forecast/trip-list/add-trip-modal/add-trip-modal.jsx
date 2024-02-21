@@ -74,9 +74,9 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
                 <option value="" hidden>
                   Select a city
                 </option>
-                {cities.map((item) => (
-                  <option key={item.title} value={item.title}>
-                    {item.title}
+                {cities.map((city) => (
+                  <option key={city.title} value={city.title}>
+                    {city.title}
                   </option>
                 ))}
               </select>
