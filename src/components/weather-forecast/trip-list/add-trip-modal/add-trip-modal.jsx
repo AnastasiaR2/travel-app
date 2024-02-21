@@ -48,6 +48,8 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
     }
   };
 
+  // TODO: helper function for date
+
   const currentDate = new Date();
   const next15Days = new Date(currentDate);
   next15Days.setDate(currentDate.getDate() + NUMBER_OF_DAYS - 1);

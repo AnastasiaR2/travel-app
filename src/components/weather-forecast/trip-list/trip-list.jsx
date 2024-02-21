@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import AddIcon from '~/assets/images/icons/add-icon.svg?react';
 import SearchIcon from '~/assets/images/icons/search-icon.svg?react';
-import { selectTrips } from '~/store/trips/selectors.js';
-import { actions as tripsActions } from '~/store/trips/trips.slice.js';
+import { selectTrips } from '~/store/trips/trips.js';
+import { actions as tripsActions } from '~/store/trips/trips.js';
 
 import { AddTripModal } from './add-trip-modal/add-trip-modal.jsx';
 import styles from './styles.module.css';
