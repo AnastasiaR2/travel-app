@@ -20,3 +20,7 @@
 .date {
   color: #808080;
 }
+
+.selectedTrip {
+  border: 1px solid #1890ff;
+}

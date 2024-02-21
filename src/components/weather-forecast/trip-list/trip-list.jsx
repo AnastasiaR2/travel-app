@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import AddIcon from '~/assets/images/icons/add-icon.svg?react';
 import SearchIcon from '~/assets/images/icons/search-icon.svg?react';
+import { actions as forecastActions } from '~/store/forecast/forecast.js';
 import { selectTrips } from '~/store/trips/trips.js';
 import { actions as tripsActions } from '~/store/trips/trips.js';
 
@@ -15,13 +16,13 @@ const TripList = () => {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTripId, setSelectedTripId] = useState(null);
 
   const handleToggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  const handleTripAdd = (tripPayload) =>
-    dispatch(tripsActions.addTrip(tripPayload));
+  const handleTripAdd = (trip) => dispatch(tripsActions.addTrip(trip));
 
   const handleTripSave = (trip) => {
     handleTripAdd(trip);
@@ -31,6 +32,11 @@ const TripList = () => {
 
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
+  };
+
+  const handleTripClick = (trip) => {
+    setSelectedTripId(trip.id);
+    dispatch(forecastActions.fetchForecastForPeriod(trip));
   };
 
   const filteredTrips = trips.filter((trip) =>
@@ -55,7 +61,12 @@ const TripList = () => {
       <div className={styles.tripsContainer}>
         <div className={styles.tripsList}>
           {sortedTrips.map((trip) => (
-            <TripItem key={trip.id} trip={trip} />
+            <TripItem
+              key={trip.id}
+              trip={trip}
+              isSelected={trip.id === selectedTripId}
+              onClick={handleTripClick}
+            />
           ))}
         </div>
         <button className={styles.addTripBtn} onClick={handleToggleModalOpen}>
