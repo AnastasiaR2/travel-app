@@ -1,0 +1,13 @@
+.avatar {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.avatar img {
+  max-width: 100%;
+}
