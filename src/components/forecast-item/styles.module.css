@@ -1,0 +1,31 @@
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.largerFontSize {
+  font-size: 1.4rem;
+}
+
+.dayOfWeek {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+}
+
+.iconWrapper img {
+  position: absolute;
+  top: 15%;
+  left: -60px;
+}
+
+.temperature {
+  margin-left: 15px;
+  font-size: 5rem;
+}

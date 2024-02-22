@@ -1,0 +1,15 @@
+.forecastContainer {
+  margin-top: 40px;
+}
+
+.forecastContainer h3 {
+  margin-bottom: 50px;
+}
+
+.forecastList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 55px;
+  max-width: 860px;
+  margin-left: 20px;
+}

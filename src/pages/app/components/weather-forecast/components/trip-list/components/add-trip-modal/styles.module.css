@@ -1,0 +1,74 @@
+.modalContent {
+  width: 700px;
+  background-color: #fff;
+  box-shadow: 0 0 18px -1px var(--shadow-color);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header svg {
+  color: #808080;
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 75px 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.formFooter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px 20px;
+}
+
+.formFooter button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 2px;
+}
+
+.cancelBtn {
+  border: 2px solid var(--border-color);
+}
+
+.saveBtn {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label span {
+  color: var(--red);
+}
+
+.label input,
+.label select {
+  position: relative;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  color: var(--input-text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.label input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(60%);
+}

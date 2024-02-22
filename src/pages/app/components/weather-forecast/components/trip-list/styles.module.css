@@ -1,0 +1,52 @@
+.tripsContainer {
+  position: relative;
+  display: flex;
+  gap: 55px;
+}
+
+.tripsList {
+  display: flex;
+  gap: 55px;
+  width: 860px;
+  padding-bottom: 5px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.searchBar {
+  display: flex;
+  gap: 7px;
+  width: 280px;
+  padding: 15px;
+  margin-bottom: 35px;
+  background-color: var(--light-gray);
+  border-radius: 7px;
+}
+
+.searchBar input {
+  font-weight: bold;
+}
+
+.addTripBtn {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  font-size: 1.2rem;
+  background-color: var(--light-gray);
+}
+
+.arrowIcon {
+  position: absolute;
+  top: 125px;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.arrowIconBack {
+  left: -35px;
+}
+
+.arrowIconForward {
+  right: 258px;
+}
