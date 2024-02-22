@@ -13,15 +13,15 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid #f2f4f8;
   padding: 20px;
   margin-top: -5px;
+  border: 1px solid var(--light-gray);
 }
 
 .date {
-  color: #808080;
+  color: var(--dark-gray);
 }
 
 .selectedTrip {
-  border: 1px solid #1890ff;
+  border: 1px solid var(--blue);
 }

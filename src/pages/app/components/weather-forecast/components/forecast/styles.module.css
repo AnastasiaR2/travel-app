@@ -8,9 +8,8 @@
 
 .forecastList {
   display: flex;
-  margin-left: 20px;
-  max-width: 860px;
-  column-gap: 55px;
-  row-gap: 25px;
   flex-wrap: wrap;
+  gap: 25px 55px;
+  max-width: 860px;
+  margin-left: 20px;
 }

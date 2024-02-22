@@ -1,25 +1,25 @@
 .tripsContainer {
+  position: relative;
   display: flex;
   gap: 55px;
-  position: relative;
 }
 
 .tripsList {
-  width: 860px;
   display: flex;
   gap: 55px;
+  width: 860px;
+  padding-bottom: 5px;
   overflow-x: auto;
   white-space: nowrap;
-  padding-bottom: 5px;
 }
 
 .searchBar {
   display: flex;
   gap: 7px;
   width: 280px;
-  margin-bottom: 35px;
-  background-color: #f2f4f8;
   padding: 15px;
+  margin-bottom: 35px;
+  background-color: var(--light-gray);
   border-radius: 7px;
 }
 
@@ -28,18 +28,18 @@
 }
 
 .addTripBtn {
+  flex-shrink: 0;
   width: 250px;
   height: 250px;
   font-size: 1.2rem;
-  background-color: #f2f4f8;
-  flex-shrink: 0;
+  background-color: var(--light-gray);
 }
 
 .arrowIcon {
-  width: 3rem;
-  height: 3rem;
   position: absolute;
   top: 125px;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
 

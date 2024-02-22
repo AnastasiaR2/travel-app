@@ -1,27 +1,38 @@
+:root {
+  --white: #fff;
+  --blue: #1890ff;
+  --dark-blue: rgb(17 14 59 / 90%);
+  --red: #F00;
+  --light-gray: #f2f4f8;
+  --dark-gray: #808080;
+  --input-text-color: rgb(0 0 0 / 40%);
+  --shadow-color: rgb(0 0 0 / 20%);
+  --border-color: #f0f0f0;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
   outline: none;
 }
 
 html {
-
   ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
   }
 
   ::-webkit-scrollbar-track {
-    border-radius: 5px;
     background-color: #0f0f0f0f;
+    border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
     background-color: #0f0f0f26;
+    border-radius: 5px;
   }
 }
 
@@ -37,10 +48,10 @@ button {
 button,
 input,
 select {
-  outline: none;
-  border: none;
-  background-color: transparent;
   font-family: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 input::placeholder {

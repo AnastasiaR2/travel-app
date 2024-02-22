@@ -5,8 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import CloseIcon from '~/assets/images/icons/close-icon.svg?react';
 import { Modal } from '~/components/components.js';
 import cities from '~/data/cities.json';
+import { calculateDateRange } from '~/libs/helpers/helpers.js';
 
-import { calculateDateRange } from './helpers/helpers.js';
 import styles from './styles.module.css';
 
 const NUMBER_OF_DAYS = 15;

@@ -1,12 +1,12 @@
 .sideInfoContainer {
-  width: 600px;
-  flex-shrink: 0;
-  min-height: 100vh;
-  background-color: rgba(17, 14, 59, 0.9);
-  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
   gap: 120px;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  min-height: 100vh;
+  color: #fff;
+  background-color: var(--dark-blue);
 }
