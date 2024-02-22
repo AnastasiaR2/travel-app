@@ -53,8 +53,3 @@ select {
   background-repeat: no-repeat;
   background-position: right 15px top 10px;
 }
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}

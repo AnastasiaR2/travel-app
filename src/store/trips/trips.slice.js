@@ -2,36 +2,16 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const mockedTrip = {
   id: '4c7564ad-fafc-4641-a692-55a683de7fbe',
-  city: 'London',
+  city: 'Kyiv',
   image:
-    'https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3',
-  startDate: '2024-02-24',
-  endDate: '2024-02-29',
-  createdAt: '2024-02-19T17:14:38.147Z',
-};
-
-const mockedTrip2 = {
-  id: '4c7564ad-fafc',
-  city: 'Berlin',
-  image:
-    'https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3',
-  startDate: '2024-02-23',
-  endDate: '2024-02-25',
-  createdAt: '2024-02-19T17:14:38.147Z',
-};
-
-const mockedTrip3 = {
-  id: '4c7564ada692-55a683de7fbe',
-  city: 'Tokyo',
-  image:
-    'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3',
-  startDate: '2024-02-25',
-  endDate: '2024-02-28',
+    'https://images.unsplash.com/photo-1591994717566-b50f283b4e63?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3',
+  startDate: '2024-03-02',
+  endDate: '2024-03-07',
   createdAt: '2024-02-19T17:14:38.147Z',
 };
 
 const initialState = {
-  trips: [mockedTrip, mockedTrip2, mockedTrip3],
+  trips: [mockedTrip],
 };
 
 const { reducer, actions } = createSlice({

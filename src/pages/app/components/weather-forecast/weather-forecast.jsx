@@ -2,9 +2,8 @@ import { useSelector } from 'react-redux';
 
 import { selectForecastForPeriod } from '~/store/forecast/forecast.js';
 
-import { Forecast } from './forecast/forecast.jsx';
+import { Forecast, TripList } from './components/components.js';
 import styles from './styles.module.css';
-import { TripList } from './trip-list/trip-list.jsx';
 
 const WeatherForecast = () => {
   const forecastForPeriod = useSelector(selectForecastForPeriod);

@@ -6,6 +6,7 @@ import CloseIcon from '~/assets/images/icons/close-icon.svg?react';
 import { Modal } from '~/components/components.js';
 import cities from '~/data/cities.json';
 
+import { calculateDateRange } from './helpers/helpers.js';
 import styles from './styles.module.css';
 
 const NUMBER_OF_DAYS = 15;
@@ -46,14 +47,7 @@ const AddTripModal = ({ isOpen, onSave, onClose }) => {
     }
   };
 
-  // TODO: helper function for date
-
-  const currentDate = new Date();
-  const next15Days = new Date(currentDate);
-  next15Days.setDate(currentDate.getDate() + NUMBER_OF_DAYS - 1);
-
-  const minDate = currentDate.toISOString().split('T')[0];
-  const maxDate = next15Days.toISOString().split('T')[0];
+  const { minDate, maxDate } = calculateDateRange(NUMBER_OF_DAYS);
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>

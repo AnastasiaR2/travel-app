@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
+import { ForecastItem } from '~/components/components.js';
 import { getPluralizedString } from '~/libs/helpers/helpers.js';
 
-import { ForecastItem } from './forecast-item/forecast-item.jsx';
 import styles from './styles.module.css';
 
 const Forecast = ({ forecast }) => {

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { ForecastItem } from '~/components/components.js';
 import { selectForecastForToday } from '~/store/forecast/forecast.js';
 
-import { CountdownTimer } from './countdown-timer/countdown-timer.jsx';
+import { CountdownTimer } from './components/components.js';
 import styles from './styles.module.css';
 
 const SideInfo = () => {

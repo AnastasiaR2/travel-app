@@ -11,9 +11,8 @@ import { actions as forecastActions } from '~/store/forecast/forecast.js';
 import { selectTrips } from '~/store/trips/trips.js';
 import { actions as tripsActions } from '~/store/trips/trips.js';
 
-import { AddTripModal } from './add-trip-modal/add-trip-modal.jsx';
+import { AddTripModal, TripItem } from './components/components.js';
 import styles from './styles.module.css';
-import { TripItem } from './trip-item/trip-item.jsx';
 
 // trip-item width + gap
 const SCROLL_VALUE = 305;
