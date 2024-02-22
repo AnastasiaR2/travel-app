@@ -29,11 +29,15 @@ const Modal = ({ isOpen, onClose, children }) => {
     };
   }, [handleEscapePress]);
 
-  return isOpen ? (
-    <div className={styles.modal} onClick={handleClickOutside}>
-      {children}
-    </div>
-  ) : null;
+  return (
+    <>
+      {isOpen && (
+        <div className={styles.modal} onClick={handleClickOutside}>
+          {children}
+        </div>
+      )}
+    </>
+  );
 };
 
 Modal.propTypes = {

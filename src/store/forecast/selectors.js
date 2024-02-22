@@ -1,3 +1,5 @@
 const selectForecastForPeriod = (state) => state.forecast.forecastForPeriod;
 
-export { selectForecastForPeriod };
+const selectForecastForToday = (state) => state.forecast.forecastForToday;
+
+export { selectForecastForPeriod, selectForecastForToday };

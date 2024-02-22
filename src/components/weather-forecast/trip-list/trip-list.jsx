@@ -37,6 +37,7 @@ const TripList = () => {
   const handleTripClick = (trip) => {
     setSelectedTripId(trip.id);
     dispatch(forecastActions.fetchForecastForPeriod(trip));
+    dispatch(forecastActions.fetchForecastForToday(trip));
   };
 
   const filteredTrips = trips.filter((trip) =>

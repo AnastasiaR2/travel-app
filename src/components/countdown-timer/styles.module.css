@@ -1,0 +1,6 @@
+.countdownContainer {
+  width: 600px;
+  flex-shrink: 0;
+  height: 100vh;
+  background-color: #110e3b;
+}

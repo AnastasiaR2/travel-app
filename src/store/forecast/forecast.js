@@ -9,4 +9,7 @@ const allActions = {
 
 export { allActions as actions };
 export { reducer } from './forecast.slice.js';
-export { selectForecastForPeriod } from './selectors.js';
+export {
+  selectForecastForPeriod,
+  selectForecastForToday,
+} from './selectors.js';

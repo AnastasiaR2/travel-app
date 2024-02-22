@@ -6,7 +6,7 @@ import { fetchForecastForPeriod, fetchForecastForToday } from './actions.js';
 
 const initialState = {
   forecastForPeriod: null,
-  forecastForDay: null,
+  forecastForToday: null,
   status: DataStatus.IDLE,
 };
 
@@ -20,7 +20,7 @@ const { reducer, actions } = createSlice({
       state.dataStatus = DataStatus.FULFILLED;
     });
     builder.addCase(fetchForecastForToday.fulfilled, (state, action) => {
-      state.forecastForPeriod = action.payload;
+      state.forecastForToday = action.payload;
       state.dataStatus = DataStatus.FULFILLED;
     });
     builder.addMatcher(
