@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { ICON_MAP } from '~/libs/constants/constants.js';
-import { getDayOfWeek } from '~/libs/helpers/helpers.js';
+import { getDayOfWeek, getValidClassNames } from '~/libs/helpers/helpers.js';
 
 import styles from './styles.module.css';
 
@@ -9,7 +9,12 @@ const ForecastItem = ({ dayForecast, address }) => {
   const { icon, datetime, tempmax, tempmin, temp } = dayForecast;
 
   return (
-    <div className={styles.dayContainer}>
+    <div
+      className={getValidClassNames(
+        styles.dayContainer,
+        address && styles.largerFontSize,
+      )}
+    >
       <p className={address && styles.dayOfWeek}>{getDayOfWeek(datetime)}</p>
       {address ? (
         <>

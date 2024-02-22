@@ -5,8 +5,13 @@
   gap: 16px;
 }
 
+.largerFontSize {
+  font-size: 1.4rem;
+}
+
 .dayOfWeek {
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .iconWrapper {

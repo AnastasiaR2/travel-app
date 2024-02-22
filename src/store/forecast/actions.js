@@ -20,11 +20,11 @@ const fetchForecastForPeriod = createAsyncThunk(
 const fetchForecastForToday = createAsyncThunk(
   'forecast/fetchForecastForToday',
   async (payload) => {
-    const { city } = payload;
+    const { city, startDate } = payload;
     const response = await axios.get(
       `${city}/today?unitGroup=metric&include=days&key=${API_KEY}&contentType=json&iconSet=icons2`,
     );
-    return response.data;
+    return { ...response.data, startDate };
   },
 );
 
