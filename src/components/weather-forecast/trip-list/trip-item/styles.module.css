@@ -1,5 +1,6 @@
 .itemContainer {
   flex: 0 0 250px;
+  cursor: pointer;
 }
 
 .itemContainer img {
