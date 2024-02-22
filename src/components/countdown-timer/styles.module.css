@@ -1,6 +1,12 @@
 .countdownContainer {
   width: 600px;
   flex-shrink: 0;
-  height: 100vh;
-  background-color: #110e3b;
+  min-height: 100vh;
+  background-color: rgba(17, 14, 59, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
 }

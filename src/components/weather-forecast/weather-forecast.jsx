@@ -8,7 +8,6 @@ import { TripList } from './trip-list/trip-list.jsx';
 
 const WeatherForecast = () => {
   const forecastForPeriod = useSelector(selectForecastForPeriod);
-  console.log(forecastForPeriod);
 
   return (
     <main className={styles.container}>
