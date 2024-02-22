@@ -6,6 +6,7 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/travel-app',
   plugins: [react(), svgr()],
   resolve: {
     alias: {
