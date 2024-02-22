@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
+import { getPluralizedString } from '~/libs/helpers/helpers.js';
+
 import { ForecastItem } from './forecast-item/forecast-item.jsx';
 import styles from './styles.module.css';
 
 const Forecast = ({ forecast }) => {
-  const headerText = `${forecast.length} ${forecast.length === 1 ? 'day' : 'days'}`;
+  const headerText = `${forecast.length} ${getPluralizedString(forecast.length, 'day')}`;
 
   return (
     <div className={styles.forecastContainer}>
