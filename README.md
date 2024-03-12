@@ -1,5 +1,6 @@
 # Travel App
 Trip app with countdown timer and weather forecast
+Live demo: https://anastasiar2.github.io/travel-app/
 
 ## Tech Stack
 
